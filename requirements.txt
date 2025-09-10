@@ -1,0 +1,9 @@
+requests
+python-dotenv
+tzlocal==2.1
+flask_apscheduler
+redis
+kafka-python-ng
+watchdog
+flask
+

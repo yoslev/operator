@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  azurecollector:
+    image: srregistry88.azurecr.io/azure-collector:2024
+    container_name: azurecollector
+    environment:
+    - HOST=localhost
+    - config_file_path=/app/collectors-conf.json 
+    volumes:
+      - './azurecollector_data:/app/data'
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+volumes:
+  kafka_data:
